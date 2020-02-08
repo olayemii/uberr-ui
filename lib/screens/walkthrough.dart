@@ -13,7 +13,7 @@ class WalkThrough extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(15.0),
+          padding: EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
               Expanded(
