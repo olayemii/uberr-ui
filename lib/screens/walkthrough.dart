@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uberr/providers/walkthrough_provider.dart';
 import 'package:uberr/screens/walkthrough_template.dart';
-import 'package:uberr/widgets/WalkthroughStepper.dart';
+import 'package:uberr/widgets/walkthrough_stepper.dart';
 
 class WalkThrough extends StatelessWidget {
   final PageController _pageViewController = PageController(initialPage: 0);

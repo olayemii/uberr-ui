@@ -32,6 +32,16 @@ class ThemeScheme {
       primaryColor: dprimaryColor,
       accentColor: dsecondaryColor,
       textTheme: textTheme,
+      appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.grey[400],
+          ),
+        ),
+      ),
     );
   }
 
@@ -42,6 +52,16 @@ class ThemeScheme {
       primaryColor: lprimaryColor,
       accentColor: lsecondaryColor,
       textTheme: textTheme,
+      appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: dbasicDarkColor),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.grey[400],
+          ),
+        ),
+      ),
     );
   }
 }
