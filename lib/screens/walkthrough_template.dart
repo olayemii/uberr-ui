@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uberr/widgets/OnboardingStepper.dart';
 
-class OnboardingTemplate extends StatelessWidget {
+class WalkThroughTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
