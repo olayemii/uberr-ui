@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
 class WalkThroughTemplate extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final Image image;
+
+  WalkThroughTemplate(
+      {@required this.title, @required this.subtitle, @required this.image})
+      : assert(title != null, subtitle != null);
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Expanded(
           child: Center(
-            child: Text("Hello World!"),
+            child: image,
           ),
         ),
         Container(
@@ -19,12 +26,12 @@ class WalkThroughTemplate extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Pay with your mobile",
+                      title,
                       style: Theme.of(context).textTheme.title,
                     ),
                     SizedBox(height: 10.0),
                     Text(
-                      "I know this is crazy, buy i tried something fresh, I hope you love it.",
+                      subtitle,
                       style: Theme.of(context).textTheme.body1.merge(
                             TextStyle(
                               color: Colors.grey[600],

@@ -23,9 +23,24 @@ class WalkThrough extends StatelessWidget {
                     _walkthroughProvider.onPageChange(index);
                   },
                   children: <Widget>[
-                    WalkThroughTemplate(),
-                    WalkThroughTemplate(),
-                    WalkThroughTemplate(),
+                    WalkThroughTemplate(
+                      title: "Pay with your mobile",
+                      subtitle:
+                          "I know this is crazy, buy i tried something fresh, I hope you love it.",
+                      image: Image.asset("assets/images/walkthrough1.png"),
+                    ),
+                    WalkThroughTemplate(
+                      title: "Pay with your mobile",
+                      subtitle:
+                          "I know this is crazy, buy i tried something fresh, I hope you love it.",
+                      image: Image.asset("assets/images/walkthrough2.png"),
+                    ),
+                    WalkThroughTemplate(
+                      title: "Pay with your mobile",
+                      subtitle:
+                          "I know this is crazy, buy i tried something fresh, I hope you love it.",
+                      image: Image.asset("assets/images/walkthrough3.png"),
+                    )
                   ],
                 ),
               ),
