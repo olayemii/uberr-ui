@@ -113,10 +113,11 @@ class Login extends StatelessWidget {
                           ),
                           Expanded(
                             child: Text(
-                              "Connect with Facebook",
+                              "Connect with Phone number",
                               textAlign: TextAlign.center,
                               style: _theme.textTheme.body1.merge(
                                 TextStyle(
+                                  fontWeight: FontWeight.bold,
                                   color: _theme.primaryColor,
                                 ),
                               ),
