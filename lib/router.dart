@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uberr/screens/country_select.dart';
-import 'package:uberr/screens/destination.dart';
+import 'package:uberr/screens/destination_view.dart';
 import 'package:uberr/screens/home.dart';
 import 'package:uberr/screens/login.dart';
 import 'package:uberr/screens/otp_verification.dart';
@@ -48,7 +48,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) => Homepage());
     case DestinationRoute:
       return MaterialPageRoute(
-          builder: (BuildContext context) => Destination());
+          builder: (BuildContext context) => DestinationView());
     default:
       return MaterialPageRoute(
           builder: (BuildContext context) => WalkThrough());
