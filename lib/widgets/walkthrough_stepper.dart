@@ -21,14 +21,19 @@ class WalkthroughStepper extends StatelessWidget {
                       curve: Curves.ease);
                 },
                 child: Container(
-                  height: 5.0,
-                  width: 40.0,
-                  decoration: BoxDecoration(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  padding: EdgeInsets.symmetric(vertical: 25.0),
+                  child: Container(
+                    height: 5.0,
+                    width: 40.0,
+                    decoration: BoxDecoration(
                       color: index <= walkthrough.currentPageValue
                           ? Theme.of(context).primaryColor
                           : Colors.grey[300],
-                      borderRadius: BorderRadius.circular(5.0)),
-                  margin: EdgeInsets.only(right: 5.0),
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    margin: EdgeInsets.only(right: 5.0),
+                  ),
                 ),
               );
             },
