@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uberr/providers/walkthrough_provider.dart';
+import 'package:uberr/router.dart';
 import 'package:uberr/widgets/walkthrough_stepper.dart';
 import 'package:uberr/widgets/walkthrough_template.dart';
 
@@ -13,7 +14,6 @@ class WalkThrough extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
               Expanded(
@@ -44,29 +44,38 @@ class WalkThrough extends StatelessWidget {
                   ],
                 ),
               ),
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    child: WalkthroughStepper(controller: _pageViewController),
-                  ),
-                  ClipOval(
-                    child: Container(
-                      color: Theme.of(context).primaryColor,
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.trending_flat,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {
-                          _pageViewController.nextPage(
-                              duration: Duration(milliseconds: 500),
-                              curve: Curves.ease);
-                        },
-                        padding: EdgeInsets.all(13.0),
-                      ),
+              Container(
+                padding: EdgeInsets.all(25.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child:
+                          WalkthroughStepper(controller: _pageViewController),
                     ),
-                  )
-                ],
+                    ClipOval(
+                      child: Container(
+                        color: Theme.of(context).primaryColor,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.trending_flat,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {
+                            if (_pageViewController.page >= 2) {
+                              Navigator.of(context).pushReplacementNamed(
+                                  UnAuthenticatedPageRoute);
+                              return;
+                            }
+                            _pageViewController.nextPage(
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease);
+                          },
+                          padding: EdgeInsets.all(13.0),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),

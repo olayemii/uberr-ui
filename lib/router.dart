@@ -7,6 +7,7 @@ import 'package:uberr/screens/login.dart';
 import 'package:uberr/screens/otp_verification.dart';
 import 'package:uberr/screens/phone_registration.dart';
 import 'package:uberr/screens/register.dart';
+import 'package:uberr/screens/unauth.dart';
 import 'package:uberr/screens/update_information.dart';
 import 'package:uberr/screens/walkthrough.dart';
 
@@ -21,6 +22,7 @@ const String UpdateInformationRoute = "update-information";
 const String SelectCountryRoute = "country-select";
 const String HomepageRoute = "homepage";
 const String DestinationRoute = "destination";
+const String UnAuthenticatedPageRoute = "unauth";
 
 // Router
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -49,6 +51,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case DestinationRoute:
       return MaterialPageRoute(
           builder: (BuildContext context) => DestinationView());
+    case UnAuthenticatedPageRoute:
+      return MaterialPageRoute(builder: (BuildContext context) => UnAuth());
     default:
       return MaterialPageRoute(
           builder: (BuildContext context) => WalkThrough());
