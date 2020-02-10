@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:uberr/styles/colors.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -26,8 +27,99 @@ class _HomepageState extends State<Homepage> {
         infoWindow: InfoWindow(title: "Lorem Ipsum"),
       ),
     );
+    final List _drawerMenu = [
+      {
+        "icon": Icons.restore,
+        "text": "My rides",
+      },
+      {
+        "icon": Icons.local_activity,
+        "text": "Promotions",
+      },
+    ];
     return Scaffold(
       resizeToAvoidBottomPadding: false,
+      drawer: Container(
+        color: Colors.white,
+        width: MediaQuery.of(context).size.width -
+            (MediaQuery.of(context).size.width * 0.2),
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
+                height: 210.0,
+                color: _theme.primaryColor,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: 30.0,
+                      backgroundImage: NetworkImage(
+                          "https://pbs.twimg.com/profile_images/1214214436283568128/KyumFmOO.jpg"),
+                    ),
+                    SizedBox(
+                      height: 7.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          "Garuba OLayemii",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 19.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Icon(
+                            Icons.chevron_right,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    ),
+                    Text(
+                      "444-509-980-103",
+                      style: TextStyle(
+                        color: Colors.white60,
+                        fontSize: 15.0,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.only(
+                    top: 40.0,
+                  ),
+                  child: ListView(
+                    children: _drawerMenu.map((menu) {
+                      return ListTile(
+                        leading: Icon(menu["icon"]),
+                        title: Text(
+                          menu["text"],
+                          style: TextStyle(
+                            fontSize: 17.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -46,12 +138,18 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                 ),
-                IconButton(
-                  icon: Icon(
-                    Icons.menu,
-                    size: 35.0,
-                  ),
-                  onPressed: () {},
+                Builder(
+                  builder: (BuildContext context) {
+                    return IconButton(
+                      icon: Icon(
+                        Icons.menu,
+                        size: 35.0,
+                      ),
+                      onPressed: () {
+                        Scaffold.of(context).openDrawer();
+                      },
+                    );
+                  },
                 ),
               ],
             ),
