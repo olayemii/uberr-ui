@@ -10,43 +10,46 @@ class WalkThroughTemplate extends StatelessWidget {
       : assert(title != null, subtitle != null);
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Expanded(
-          child: Center(
-            child: image,
+    return Container(
+      padding: EdgeInsets.all(25.0),
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            child: Center(
+              child: image,
+            ),
           ),
-        ),
-        Container(
-          height: 200.0,
-          child: Column(
-            children: <Widget>[
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      title,
-                      style: Theme.of(context).textTheme.title,
-                    ),
-                    SizedBox(height: 10.0),
-                    Text(
-                      subtitle,
-                      style: Theme.of(context).textTheme.body1.merge(
-                            TextStyle(
-                              color: Colors.grey[600],
-                              height: 1.3,
-                              fontWeight: FontWeight.w700,
+          Container(
+            height: 180.0,
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        title,
+                        style: Theme.of(context).textTheme.title,
+                      ),
+                      SizedBox(height: 10.0),
+                      Text(
+                        subtitle,
+                        style: Theme.of(context).textTheme.body1.merge(
+                              TextStyle(
+                                color: Colors.grey[600],
+                                height: 1.3,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
-                          ),
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-        )
-      ],
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
