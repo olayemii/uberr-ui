@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uberr/router.dart';
 import 'package:uberr/styles/colors.dart';
 
 class UnAuth extends StatelessWidget {
@@ -33,7 +34,9 @@ class UnAuth extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushNamed(LoginRoute);
+                          },
                         ),
                       ),
                       SizedBox(width: 40.0),
@@ -46,7 +49,9 @@ class UnAuth extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushNamed(RegisterRoute);
+                          },
                         ),
                       )
                     ],

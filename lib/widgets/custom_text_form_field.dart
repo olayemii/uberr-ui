@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uberr/styles/colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
@@ -17,7 +16,7 @@ class CustomTextFormField extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 14.0,
-              color: Colors.grey[500],
+              color: Color(0xFF9CA4AA),
             ),
           ),
           SizedBox(
@@ -35,9 +34,10 @@ class CustomTextFormField extends StatelessWidget {
               ),
               hintText: hintText,
               hintStyle: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17.0,
-                  color: dbasicGreyColor),
+                fontWeight: FontWeight.w500,
+                fontSize: 16.0,
+                color: Colors.grey[400],
+              ),
             ),
           ),
         ],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:uberr/router.dart';
 import 'package:uberr/styles/colors.dart';
 import 'package:uberr/widgets/custom_text_form_field.dart';
 
@@ -14,18 +16,27 @@ class Login extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.canPop(context)
+                ? Navigator.of(context).pop()
+                : () => null;
+          },
         ),
         actions: <Widget>[
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.only(right: 25.0),
-            child: Text(
-              "Sign Up",
-              style: TextStyle(
-                color: _theme.primaryColor,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w700,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(RegisterRoute);
+            },
+            child: Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(right: 25.0),
+              child: Text(
+                "Sign Up",
+                style: TextStyle(
+                  color: _theme.primaryColor,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ),
@@ -76,7 +87,7 @@ class Login extends StatelessWidget {
                       child: Row(
                         children: <Widget>[
                           Icon(
-                            Icons.pages,
+                            FontAwesomeIcons.facebookSquare,
                             color: Colors.white,
                           ),
                           Expanded(
@@ -85,6 +96,7 @@ class Login extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: _theme.textTheme.body1.merge(
                                 TextStyle(
+                                  fontWeight: FontWeight.w500,
                                   color: Colors.white,
                                 ),
                               ),
