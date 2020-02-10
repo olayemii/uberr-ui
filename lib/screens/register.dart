@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uberr/router.dart';
 import 'package:uberr/styles/colors.dart';
 import 'package:uberr/widgets/custom_text_form_field.dart';
 
@@ -14,18 +15,27 @@ class Register extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+          onPressed: () {
+            if (Navigator.of(context).canPop()) {
+              Navigator.of(context).pop();
+            }
+          },
         ),
         actions: <Widget>[
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.only(right: 25.0),
-            child: Text(
-              "Log In",
-              style: TextStyle(
-                color: _theme.primaryColor,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w700,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(LoginRoute);
+            },
+            child: Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(right: 25.0),
+              child: Text(
+                "Log In",
+                style: TextStyle(
+                  color: _theme.primaryColor,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ),
