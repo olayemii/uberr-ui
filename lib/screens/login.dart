@@ -17,9 +17,9 @@ class Login extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.canPop(context)
-                ? Navigator.of(context).pop()
-                : () => null;
+            if (Navigator.of(context).canPop()) {
+              Navigator.of(context).pop();
+            }
           },
         ),
         actions: <Widget>[
@@ -180,7 +180,9 @@ class Login extends StatelessWidget {
           height: 45.0,
           child: FlatButton(
             color: _theme.primaryColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed(HomepageRoute);
+            },
             child: Text(
               "LOG IN",
               style: TextStyle(color: Colors.white, fontSize: 16.0),
