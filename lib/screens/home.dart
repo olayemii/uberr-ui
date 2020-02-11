@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:uberr/router.dart';
 import 'package:uberr/styles/colors.dart';
 
 class Homepage extends StatefulWidget {
@@ -36,6 +37,22 @@ class _HomepageState extends State<Homepage> {
         "icon": Icons.local_activity,
         "text": "Promotions",
       },
+      {
+        "icon": Icons.star_border,
+        "text": "My favourites",
+      },
+      {
+        "icon": Icons.credit_card,
+        "text": "My payments",
+      },
+      {
+        "icon": Icons.notifications,
+        "text": "Notification",
+      },
+      {
+        "icon": Icons.chat,
+        "text": "Support",
+      }
     ];
     return Scaffold(
       resizeToAvoidBottomPadding: false,
@@ -51,7 +68,7 @@ class _HomepageState extends State<Homepage> {
                 padding: EdgeInsets.symmetric(
                   horizontal: 25.0,
                 ),
-                height: 210.0,
+                height: 170.0,
                 color: _theme.primaryColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +94,9 @@ class _HomepageState extends State<Homepage> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushNamed(ProfileRoute);
+                          },
                           child: Icon(
                             Icons.chevron_right,
                             color: Colors.white,
@@ -98,7 +117,7 @@ class _HomepageState extends State<Homepage> {
               Expanded(
                 child: Container(
                   padding: EdgeInsets.only(
-                    top: 40.0,
+                    top: 20.0,
                   ),
                   child: ListView(
                     children: _drawerMenu.map((menu) {
