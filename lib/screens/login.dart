@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: _theme.scaffoldBackgroundColor,
         automaticallyImplyLeading: false,
-        elevation: 0,
+        elevation: 0.0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {

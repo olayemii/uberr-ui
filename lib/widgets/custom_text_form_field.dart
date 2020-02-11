@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final double verticalPadding;
-  CustomTextFormField({@required this.hintText, this.verticalPadding});
+  final String value;
+  final Icon suffixIcon;
+  CustomTextFormField(
+      {@required this.hintText,
+      this.verticalPadding,
+      this.value,
+      this.suffixIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +29,12 @@ class CustomTextFormField extends StatelessWidget {
             height: 7.0,
           ),
           TextFormField(
+            initialValue: value,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
             decoration: InputDecoration(
+              suffixIcon: suffixIcon,
               contentPadding: EdgeInsets.symmetric(
                   vertical: verticalPadding != null ? verticalPadding : 10.0,
                   horizontal: 15.0),
