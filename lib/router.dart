@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uberr/screens/add_card.dart';
+import 'package:uberr/screens/chat_rider.dart';
 import 'package:uberr/screens/country_select.dart';
 import 'package:uberr/screens/destination_view.dart';
 import 'package:uberr/screens/home.dart';
@@ -29,6 +30,7 @@ const String UnAuthenticatedPageRoute = "unauth";
 const String ProfileRoute = "profile";
 const String PaymentRoute = "payment";
 const String AddCardRoute = "addCard";
+const String ChatRiderRoute = "chatRider";
 // Router
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -64,6 +66,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) => Payment());
     case AddCardRoute:
       return MaterialPageRoute(builder: (BuildContext context) => AddCard());
+    case ChatRiderRoute:
+      return MaterialPageRoute(builder: (BuildContext context) => ChatRider());
     default:
       return MaterialPageRoute(
           builder: (BuildContext context) => WalkThrough());
