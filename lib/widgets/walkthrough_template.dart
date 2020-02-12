@@ -7,7 +7,7 @@ class WalkThroughTemplate extends StatelessWidget {
 
   WalkThroughTemplate(
       {@required this.title, @required this.subtitle, @required this.image})
-      : assert(title != null, subtitle != null);
+      : assert(title != null), assert(subtitle != null);
   @override
   Widget build(BuildContext context) {
     return Container(
