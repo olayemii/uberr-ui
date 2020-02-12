@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uberr/models/destination.dart';
 import 'package:uberr/models/place.dart';
 import 'package:uberr/styles/colors.dart';
+import 'package:uberr/widgets/location_card.dart';
 
 class DestinationView extends StatefulWidget {
   @override
@@ -242,16 +243,7 @@ class _DestinationViewState extends State<DestinationView> {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              ListTile(
-                contentPadding:
-                    EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
-                leading: Icon(
-                  Icons.location_on,
-                  color: _theme.primaryColor,
-                ),
-                title: Text(place.name),
-                subtitle: Text(place.address),
-              ),
+              LocationCard(place),
               Divider(
                 height: 0.0,
               )
