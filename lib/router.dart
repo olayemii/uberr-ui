@@ -11,6 +11,7 @@ import 'package:uberr/screens/otp_verification.dart';
 import 'package:uberr/screens/payment.dart';
 import 'package:uberr/screens/phone_registration.dart';
 import 'package:uberr/screens/profile.dart';
+import 'package:uberr/screens/promotions.dart';
 import 'package:uberr/screens/register.dart';
 import 'package:uberr/screens/unauth.dart';
 import 'package:uberr/screens/update_favorite.dart';
@@ -35,6 +36,7 @@ const String AddCardRoute = "addCard";
 const String ChatRiderRoute = "chatRider";
 const String FavoritesRoute = "favorite";
 const String UpdateFavoritesRoute = "update-favorite";
+const String PromotionRoute = "promotion";
 
 // Router
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -75,6 +77,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) => ChatRider());
     case FavoritesRoute:
       return MaterialPageRoute(builder: (BuildContext context) => Favorites());
+    case PromotionRoute:
+      return MaterialPageRoute(builder: (BuildContext context) => Promotions());
     case UpdateFavoritesRoute:
       return MaterialPageRoute(
           builder: (BuildContext context) => UpdateFavorite());
