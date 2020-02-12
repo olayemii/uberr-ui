@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:uberr/models/debitcard.dart';
-import 'package:uberr/router.dart';
 import 'package:uberr/widgets/app_drawer.dart';
 import 'package:uberr/widgets/card_container.dart';
 
@@ -77,9 +76,10 @@ class Payment extends StatelessWidget {
                   trailing: Transform.scale(
                     scale: 1.5,
                     child: Checkbox(
-                        value: true,
-                        activeColor: _theme.primaryColor,
-                        onChanged: (value) {}),
+                      value: true,
+                      activeColor: _theme.primaryColor,
+                      onChanged: (value) {},
+                    ),
                   ),
                 ),
               ),

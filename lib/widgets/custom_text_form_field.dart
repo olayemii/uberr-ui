@@ -5,11 +5,13 @@ class CustomTextFormField extends StatelessWidget {
   final double verticalPadding;
   final String value;
   final Icon suffixIcon;
+  final bool showLabel;
   CustomTextFormField(
       {@required this.hintText,
       this.verticalPadding,
       this.value,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.showLabel = true});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +19,16 @@ class CustomTextFormField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            hintText.toUpperCase(),
-            style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 14.0,
-              color: Color(0xFF9CA4AA),
-            ),
-          ),
+          showLabel
+              ? Text(
+                  hintText.toUpperCase(),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14.0,
+                    color: Color(0xFF9CA4AA),
+                  ),
+                )
+              : SizedBox(),
           SizedBox(
             height: 7.0,
           ),
