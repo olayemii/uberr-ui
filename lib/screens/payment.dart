@@ -88,8 +88,9 @@ class Payment extends StatelessWidget {
               ),
               Text(
                 "Choose a different payment method from a list of already setup payment methods.",
-                style:
-                    _theme.textTheme.subtitle.merge(TextStyle(fontSize: 14.0)),
+                style: _theme.textTheme.subtitle.merge(
+                  TextStyle(fontSize: 14.0),
+                ),
               ),
               SizedBox(
                 height: 15.0,
