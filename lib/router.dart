@@ -13,6 +13,7 @@ import 'package:uberr/screens/phone_registration.dart';
 import 'package:uberr/screens/profile.dart';
 import 'package:uberr/screens/promotions.dart';
 import 'package:uberr/screens/register.dart';
+import 'package:uberr/screens/suggested_rides.dart';
 import 'package:uberr/screens/unauth.dart';
 import 'package:uberr/screens/update_favorite.dart';
 import 'package:uberr/screens/update_information.dart';
@@ -37,6 +38,7 @@ const String ChatRiderRoute = "chatRider";
 const String FavoritesRoute = "favorite";
 const String UpdateFavoritesRoute = "update-favorite";
 const String PromotionRoute = "promotion";
+const String SuggestedRidesRoute = "suggested-route";
 
 // Router
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -82,6 +84,9 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case UpdateFavoritesRoute:
       return MaterialPageRoute(
           builder: (BuildContext context) => UpdateFavorite());
+    case SuggestedRidesRoute:
+      return MaterialPageRoute(
+          builder: (BuildContext context) => SuggestedRides());
     default:
       return MaterialPageRoute(
           builder: (BuildContext context) => WalkThrough());
