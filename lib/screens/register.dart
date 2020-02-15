@@ -28,7 +28,7 @@ class Register extends StatelessWidget {
             },
             child: Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.only(right: 25.0),
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
               child: Text(
                 "Log In",
                 style: TextStyle(
@@ -41,43 +41,49 @@ class Register extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.all(25.0),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 20.0),
-                    child: Text(
-                      "Sign Up",
-                      style: _theme.textTheme.title.merge(
-                        TextStyle(fontSize: 30.0),
+      body: SingleChildScrollView(
+        child: Container(
+          height: MediaQuery.of(context).size.height - 100.0,
+          padding: EdgeInsets.all(25.0),
+          margin: EdgeInsets.only(bottom: 300.0),
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
+                      child: Text(
+                        "Sign Up",
+                        style: _theme.textTheme.title.merge(
+                          TextStyle(fontSize: 30.0),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  _signupForm(),
-                ],
-              ),
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 45.0,
-              child: FlatButton(
-                color: _theme.primaryColor,
-                onPressed: () {},
-                child: Text(
-                  "SIGN UP",
-                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                    SizedBox(
+                      height: 30.0,
+                    ),
+                    _signupForm(),
+                  ],
                 ),
               ),
-            )
-          ],
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 45.0,
+                child: FlatButton(
+                  color: _theme.primaryColor,
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(OtpVerificationRoute);
+                  },
+                  child: Text(
+                    "SIGN UP",
+                    style: TextStyle(color: Colors.white, fontSize: 16.0),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

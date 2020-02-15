@@ -13,14 +13,17 @@ class AppDrawer extends StatelessWidget {
       {
         "icon": Icons.local_activity,
         "text": "Promotions",
+        "route": PromotionRoute
       },
       {
         "icon": Icons.star_border,
         "text": "My favourites",
+        "route": FavoritesRoute
       },
       {
         "icon": Icons.credit_card,
         "text": "My payments",
+        "route": PaymentRoute,
       },
       {
         "icon": Icons.notifications,
@@ -29,6 +32,7 @@ class AppDrawer extends StatelessWidget {
       {
         "icon": Icons.chat,
         "text": "Support",
+        "route": ChatRiderRoute,
       }
     ];
     return Container(
@@ -96,13 +100,18 @@ class AppDrawer extends StatelessWidget {
                 ),
                 child: ListView(
                   children: _drawerMenu.map((menu) {
-                    return ListTile(
-                      leading: Icon(menu["icon"]),
-                      title: Text(
-                        menu["text"],
-                        style: TextStyle(
-                          fontSize: 17.0,
-                          fontWeight: FontWeight.bold,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(menu["route"]);
+                      },
+                      child: ListTile(
+                        leading: Icon(menu["icon"]),
+                        title: Text(
+                          menu["text"],
+                          style: TextStyle(
+                            fontSize: 17.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     );

@@ -29,7 +29,7 @@ class Login extends StatelessWidget {
             },
             child: Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.only(right: 25.0),
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
               child: Text(
                 "Sign Up",
                 style: TextStyle(
