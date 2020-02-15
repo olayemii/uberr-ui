@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:uberr/router.dart';
 import 'package:uberr/styles/colors.dart';
 
@@ -12,6 +13,7 @@ class UnAuth extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Container(
+                child: Image.asset("assets/images/bg.png"),
                 decoration: BoxDecoration(),
               ),
             ),
@@ -94,7 +96,7 @@ class UnAuth extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Icon(
-                          Icons.graphic_eq,
+                          FontAwesomeIcons.facebookSquare,
                           color: Colors.white,
                         ),
                         Expanded(
@@ -123,7 +125,7 @@ class UnAuth extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Icon(
-                          Icons.graphic_eq,
+                          FontAwesomeIcons.google,
                           color: _theme.primaryColor,
                         ),
                         Expanded(
