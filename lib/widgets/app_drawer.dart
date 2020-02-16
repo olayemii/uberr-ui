@@ -9,6 +9,7 @@ class AppDrawer extends StatelessWidget {
       {
         "icon": Icons.restore,
         "text": "My rides",
+        "route": MyRidesRoute,
       },
       {
         "icon": Icons.local_activity,
