@@ -42,7 +42,7 @@ class _DestinationViewState extends State<DestinationView> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(25.0),
+        padding: EdgeInsets.all(15.0),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

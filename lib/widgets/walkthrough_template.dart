@@ -14,38 +14,38 @@ class WalkThroughTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
     return Container(
-      padding: EdgeInsets.all(25.0),
+      padding: EdgeInsets.all(15.0),
       child: Column(
         children: <Widget>[
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed(UnAuthenticatedPageRoute);
-            },
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: Container(
-                height: 25.0,
-                width: 70.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    300.0,
-                  ),
-                  border: Border.all(
-                    color: _theme.primaryColor,
-                  ),
-                ),
-                child: Text(
-                  "Skip",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: _theme.primaryColor,
-                    fontSize: 14.0,
-                    height: 1.4,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // GestureDetector(
+          //   onTap: () {
+          //     Navigator.of(context).pushNamed(UnAuthenticatedPageRoute);
+          //   },
+          //   child: Align(
+          //     alignment: Alignment.bottomRight,
+          //     child: Container(
+          //       height: 25.0,
+          //       width: 70.0,
+          //       decoration: BoxDecoration(
+          //         borderRadius: BorderRadius.circular(
+          //           300.0,
+          //         ),
+          //         border: Border.all(
+          //           color: _theme.primaryColor,
+          //         ),
+          //       ),
+          //       child: Text(
+          //         "Skip",
+          //         textAlign: TextAlign.center,
+          //         style: TextStyle(
+          //           color: _theme.primaryColor,
+          //           fontSize: 14.0,
+          //           height: 1.4,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Expanded(
             child: Center(
               child: image,

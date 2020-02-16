@@ -44,7 +44,7 @@ class Register extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height - 100.0,
-          padding: EdgeInsets.all(25.0),
+          padding: EdgeInsets.all(15.0),
           margin: EdgeInsets.only(bottom: 300.0),
           child: Column(
             children: <Widget>[

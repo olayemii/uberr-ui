@@ -22,7 +22,7 @@ class UpdateFavorite extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(25.0),
+        padding: EdgeInsets.all(15.0),
         color: Colors.white,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

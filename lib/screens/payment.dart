@@ -39,7 +39,7 @@ class Payment extends StatelessWidget {
       drawer: AppDrawer(),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(25.0),
+          padding: EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [

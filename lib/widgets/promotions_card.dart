@@ -5,14 +5,14 @@ class PromotionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
       child: Row(
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
               color: Colors.white,
             ),
-            padding: EdgeInsets.all(35.0),
+            padding: EdgeInsets.symmetric(vertical: 35.0, horizontal: 25.0),
             child: CircleAvatar(
               backgroundColor: Color.fromRGBO(238, 75, 69, 0.18),
               radius: 30.0,
