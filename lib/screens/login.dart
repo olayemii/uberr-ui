@@ -43,7 +43,7 @@ class Login extends StatelessWidget {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(25.0),
+        padding: EdgeInsets.all(15.0),
         child: Column(
           children: <Widget>[
             Expanded(

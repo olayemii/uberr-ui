@@ -34,6 +34,7 @@ class ChatRider extends StatelessWidget {
                 color: Colors.white,
               ),
               child: ListTile(
+                contentPadding: EdgeInsets.only(right: 10.0),
                 leading: IconButton(
                   icon: Icon(
                     Icons.arrow_back_ios,
@@ -78,7 +79,7 @@ class ChatRider extends StatelessWidget {
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(
-                  25.0,
+                  15.0,
                 ),
                 child: Column(
                   children: <Widget>[
@@ -134,7 +135,7 @@ class ChatRider extends StatelessWidget {
             Container(
               height: 120.0,
               padding: EdgeInsets.symmetric(
-                horizontal: 25.0,
+                horizontal: 15.0,
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

@@ -16,8 +16,18 @@ class LocationCard extends StatelessWidget {
             Icons.location_on,
             color: _theme.primaryColor,
           ),
-          title: Text(place.name),
-          subtitle: Text(place.address),
+          title: Text(
+            place.name,
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          subtitle: Text(
+            place.address,
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ),
         Divider(),
       ],
