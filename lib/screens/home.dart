@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:uberr/router.dart';
+import 'package:flutter_map/flutter_map.dart';
 import 'package:uberr/widgets/app_drawer.dart';
+import 'package:latlong/latlong.dart';
+import 'package:geolocator/geolocator.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -9,26 +10,59 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  GoogleMapController mapController;
+  List<Marker> _markers = [
+    Marker(
+      width: 60.0,
+      height: 60.0,
+      point: LatLng(51.32, -0.083),
+      builder: (ctx) => Container(
+        child: Image.asset(
+          "assets/images/car2.png",
+          width: 60.0,
+          height: 60.0,
+        ),
+      ),
+    ),
+    Marker(
+      width: 60.0,
+      height: 60.0,
+      point: LatLng(51.3, -0.08),
+      builder: (ctx) => Container(
+        child: Image.asset(
+          "assets/images/car2.png",
+          width: 60.0,
+          height: 60.0,
+        ),
+      ),
+    ),
+    Marker(
+      width: 60.0,
+      height: 60.0,
+      point: LatLng(51.29, -0.077),
+      builder: (ctx) => Container(
+        child: Image.asset(
+          "assets/images/car2.png",
+          width: 60.0,
+          height: 60.0,
+        ),
+      ),
+    )
+  ];
+  @override
+  void initState() {
+    super.initState();
+    getMyLocation();
+  }
 
-  final LatLng _center = const LatLng(6.4413956, 3.4157137);
-  Set<Marker> _markers = {};
-
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
+  Future<void> getMyLocation() async {
+    Position position = await Geolocator()
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    print(position);
   }
 
   @override
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
-    _markers.add(
-      Marker(
-        markerId: MarkerId(TimeOfDay.now().toString()),
-        position: _center,
-        infoWindow: InfoWindow(title: "Lorem Ipsum"),
-      ),
-    );
-
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       drawer: AppDrawer(),
@@ -39,15 +73,29 @@ class _HomepageState extends State<Homepage> {
               children: <Widget>[
                 Container(
                   height: MediaQuery.of(context).size.height - 230.0,
-                  child: GoogleMap(
-                    myLocationButtonEnabled: true,
-                    myLocationEnabled: true,
-                    markers: _markers,
-                    onMapCreated: _onMapCreated,
-                    initialCameraPosition: CameraPosition(
-                      target: _center,
-                      zoom: 11.0,
+                  // child: GoogleMap(
+                  //   myLocationButtonEnabled: true,
+                  //   myLocationEnabled: true,
+                  //   markers: _markers,
+                  //   onMapCreated: _onMapCreated,
+                  //   initialCameraPosition: CameraPosition(
+                  //     target: _center,
+                  //     zoom: 11.0,
+                  //   ),
+                  // ),
+                  child: FlutterMap(
+                    options: MapOptions(
+                      center: LatLng(51.3, -0.08),
+                      zoom: 13.0,
                     ),
+                    layers: [
+                      TileLayerOptions(
+                        urlTemplate:
+                            "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                        subdomains: ['a', 'b', 'c'],
+                      ),
+                      MarkerLayerOptions(markers: _markers)
+                    ],
                   ),
                 ),
                 Builder(

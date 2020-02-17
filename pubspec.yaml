@@ -25,9 +25,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   provider: ^4.0.3
   iso_countries: ^1.0.3
-  google_maps_flutter: ^0.5.11
   font_awesome_flutter: ^8.5.0
   bubble: ^1.1.9+1
+  flutter_map: ^0.8.2
+  geolocator: ^5.2.1
 
 dev_dependencies:
   flutter_test:

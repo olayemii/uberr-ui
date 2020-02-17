@@ -12,7 +12,7 @@ void main() {
         debugShowCheckedModeBanner: false,
         onGenerateRoute: onGenerateRoute,
         theme: ThemeScheme.light(),
-        initialRoute: WalkthroughRoute,
+        initialRoute: HomepageRoute,
       ),
     ),
   );

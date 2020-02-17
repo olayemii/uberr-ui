@@ -45,7 +45,7 @@ class WalkThrough extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(24.0),
                 child: Row(
                   children: <Widget>[
                     Expanded(
