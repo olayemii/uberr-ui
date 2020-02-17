@@ -10,6 +10,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  LatLng myLocation;
   List<Marker> _markers = [
     Marker(
       width: 60.0,
@@ -57,6 +58,29 @@ class _HomepageState extends State<Homepage> {
   Future<void> getMyLocation() async {
     Position position = await Geolocator()
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    myLocation = LatLng(position.latitude, position.longitude);
+    this.setState(() {
+      _markers.add(
+        Marker(
+          width: 60.0,
+          height: 60.0,
+          point: myLocation,
+          builder: (ctx) => Container(
+            child: Row(
+              children: <Widget>[
+                Container(
+                  width: 30.0,
+                  child: Icon(Icons.person_pin_circle),
+                ),
+                Container(
+                  child: Text("Pick Up Here"),
+                )
+              ],
+            ),
+          ),
+        ),
+      );
+    });
     print(position);
   }
 
