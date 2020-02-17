@@ -43,7 +43,7 @@ class MyRides extends StatelessWidget {
                       unselectedLabelColor: Colors.grey,
                       labelColor: _theme.primaryColor,
                       labelStyle: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),
                       indicatorColor: _theme.primaryColor,

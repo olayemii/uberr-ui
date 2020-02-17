@@ -65,6 +65,9 @@ class RideCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    SizedBox(
+                      height: 5.0,
+                    ),
                     Text(
                       "\$45.00",
                       style: TextStyle(
