@@ -14,7 +14,7 @@ class WalkThroughTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
     return Container(
-      padding: EdgeInsets.all(15.0),
+      padding: EdgeInsets.all(24.0),
       child: Column(
         children: <Widget>[
           // GestureDetector(
