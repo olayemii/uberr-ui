@@ -26,4 +26,4 @@ PRs are welcome ヽ(•‿•)ノ ヽ(•‿•)ノ
 
 **Project is free to use/modify by anyone and everyone**
 
-<a href="ss/app.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
+<a href="https://api.codemagic.io/artifacts/2372e1af-4905-47ff-8d22-62e624699e57/4144e029-a82a-4d42-8429-fd679b84b8e0/app.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
