@@ -30,13 +30,13 @@ class WalkThrough extends StatelessWidget {
                       image: Image.asset("assets/images/walkthrough1.png"),
                     ),
                     WalkThroughTemplate(
-                      title: "Pay with your mobile",
+                      title: "Get bonuses on each ride",
                       subtitle:
                           "I know this is crazy, buy i tried something fresh, I hope you love it.",
                       image: Image.asset("assets/images/walkthrough2.png"),
                     ),
                     WalkThroughTemplate(
-                      title: "Pay with your mobile",
+                      title: "Invite friends and get paid.",
                       subtitle:
                           "I know this is crazy, buy i tried something fresh, I hope you love it.",
                       image: Image.asset("assets/images/walkthrough3.png"),
