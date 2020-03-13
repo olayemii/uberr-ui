@@ -26,7 +26,7 @@ PRs are welcome ヽ(•‿•)ノ ヽ(•‿•)ノ
 
 ## Special Thanks to:
 
-@vladbalan
+<a href='https://www.github.com/vladbalan'>@vladbalan</a>
 
 **Project is free to use/modify by anyone and everyone**
 
