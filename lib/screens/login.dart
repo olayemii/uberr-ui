@@ -42,107 +42,108 @@ class Login extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.all(15.0),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 20.0),
-                    child: Text(
-                      "Log In",
-                      style: _theme.textTheme.title.merge(
-                        TextStyle(fontSize: 30.0),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+                child: Text(
+                  "Log In",
+                  style: _theme.textTheme.title.merge(
+                    TextStyle(fontSize: 30.0),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              _loginForm(context),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Text(
+                      "Or connect using social account",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  _loginForm(context),
-                ],
-              ),
-            ),
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Text(
-                    "Or connect using social account",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                    SizedBox(
+                      height: 10.0,
                     ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Container(
-                    height: 45.0,
-                    child: FlatButton(
-                      onPressed: () {},
-                      color: facebookColor,
-                      child: Row(
-                        children: <Widget>[
-                          Icon(
-                            FontAwesomeIcons.facebookSquare,
-                            color: Colors.white,
-                          ),
-                          Expanded(
-                            child: Text(
-                              "Connect with Facebook",
-                              textAlign: TextAlign.center,
-                              style: _theme.textTheme.body1.merge(
-                                TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
+                    Container(
+                      height: 45.0,
+                      child: FlatButton(
+                        onPressed: () {},
+                        color: facebookColor,
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              FontAwesomeIcons.facebookSquare,
+                              color: Colors.white,
+                            ),
+                            Expanded(
+                              child: Text(
+                                "Connect with Facebook",
+                                textAlign: TextAlign.center,
+                                style: _theme.textTheme.body1.merge(
+                                  TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                          color: _theme.primaryColor,
-                        ),
-                        borderRadius: BorderRadius.circular(3.0)),
-                    margin: EdgeInsets.only(top: 10.0),
-                    height: 45.0,
-                    child: FlatButton(
-                      onPressed: () {},
-                      color: _theme.scaffoldBackgroundColor,
-                      child: Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.phone,
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
                             color: _theme.primaryColor,
                           ),
-                          Expanded(
-                            child: Text(
-                              "Connect with Phone number",
-                              textAlign: TextAlign.center,
-                              style: _theme.textTheme.body1.merge(
-                                TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: _theme.primaryColor,
+                          borderRadius: BorderRadius.circular(3.0)),
+                      margin: EdgeInsets.only(
+                        top: 10.0,
+                      ),
+                      height: 45.0,
+                      child: FlatButton(
+                        onPressed: () {},
+                        color: _theme.scaffoldBackgroundColor,
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.phone,
+                              color: _theme.primaryColor,
+                            ),
+                            Expanded(
+                              child: Text(
+                                "Connect with Phone number",
+                                textAlign: TextAlign.center,
+                                style: _theme.textTheme.body1.merge(
+                                  TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: _theme.primaryColor,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                ],
-              ),
-            )
-          ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
