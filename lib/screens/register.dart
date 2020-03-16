@@ -43,33 +43,29 @@ class Register extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height - 100.0,
           padding: EdgeInsets.all(15.0),
-          margin: EdgeInsets.only(bottom: 300.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 20.0),
-                      child: Text(
-                        "Sign Up",
-                        style: _theme.textTheme.title.merge(
-                          TextStyle(fontSize: 30.0),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 30.0,
-                    ),
-                    _signupForm(),
-                  ],
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+                child: Text(
+                  "Sign Up",
+                  style: _theme.textTheme.title.merge(
+                    TextStyle(fontSize: 30.0),
+                  ),
                 ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              _signupForm(),
+              SizedBox(
+                height: 30.0,
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.only(bottom: 30.0),
                 height: 45.0,
                 child: FlatButton(
                   color: _theme.primaryColor,
