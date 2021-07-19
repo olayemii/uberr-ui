@@ -88,7 +88,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       drawer: AppDrawer(),
       body: SafeArea(
         child: Column(
@@ -96,7 +96,7 @@ class _HomepageState extends State<Homepage> {
             Stack(
               children: <Widget>[
                 Container(
-                  height: MediaQuery.of(context).size.height - 230.0,
+                  height: MediaQuery.of(context).size.height - 260.0,
                   // child: GoogleMap(
                   //   myLocationButtonEnabled: true,
                   //   myLocationEnabled: true,

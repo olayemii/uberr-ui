@@ -1,0 +1,61 @@
+PODS:
+  - Flutter (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - geolocator (5.2.1):
+    - Flutter
+  - google_api_availability (2.0.2):
+    - Flutter
+  - iso_countries (0.0.1):
+    - Flutter
+  - "location_permissions (2.0.4+1)":
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
+  - sqflite (0.0.1):
+    - Flutter
+    - FMDB (~> 2.7.2)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - geolocator (from `.symlinks/plugins/geolocator/ios`)
+  - google_api_availability (from `.symlinks/plugins/google_api_availability/ios`)
+  - iso_countries (from `.symlinks/plugins/iso_countries/ios`)
+  - location_permissions (from `.symlinks/plugins/location_permissions/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  geolocator:
+    :path: ".symlinks/plugins/geolocator/ios"
+  google_api_availability:
+    :path: ".symlinks/plugins/google_api_availability/ios"
+  iso_countries:
+    :path: ".symlinks/plugins/iso_countries/ios"
+  location_permissions:
+    :path: ".symlinks/plugins/location_permissions/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  geolocator: a048cc412bf350b17d671d170f151b0c9fb8f098
+  google_api_availability: 6f1017d3a61be12be3bd9f929cc5b2606f24ae7f
+  iso_countries: eb09d40f388e4c65e291e0bb36a701dfe7de6c74
+  location_permissions: 360d12ecd1c94a4cab68585f508be1d5ad944c8b
+  path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+  sqflite: 4001a31ff81d210346b500c55b17f4d6c7589dd0
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1

@@ -23,7 +23,7 @@ class ChatRider extends StatelessWidget {
     );
 
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           children: <Widget>[

@@ -22,7 +22,7 @@ class Payment extends StatelessWidget {
       ),
     ];
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: _theme.scaffoldBackgroundColor,
         automaticallyImplyLeading: false,

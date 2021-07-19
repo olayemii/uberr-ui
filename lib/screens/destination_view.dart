@@ -19,7 +19,7 @@ class _DestinationViewState extends State<DestinationView> {
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: _theme.scaffoldBackgroundColor,
         automaticallyImplyLeading: false,
