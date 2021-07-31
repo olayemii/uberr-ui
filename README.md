@@ -3,7 +3,7 @@
 
 A flutter Uber UI Kit inspired by [A design on behance](https://www.behance.net/gallery/84576871/JUBER-Car-Booking-mobile-UI-Kit)
 
-20+ Screens and still making more. 😁😁
+20+ Screens and still making more. 😁
 
 Star if you like what you see. ⭐⭐⭐⭐⭐
 
